@@ -12,7 +12,11 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <Authorize currentUser={currentUser} setCurrentUser={setCurrentUser} />
+            {currentUser ? (
+              <h1>you did it!</h1>
+            ) : (
+              <Authorize currentUser={currentUser} setCurrentUser={setCurrentUser} />
+            )}
           </Route>
         </Switch>
       </BrowserRouter>
