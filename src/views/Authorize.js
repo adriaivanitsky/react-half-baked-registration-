@@ -4,11 +4,11 @@ import AuthorizeForm from '../components/AuthorizeForm';
 import { signInUser, signupUser } from '../services/users';
 import Header from '../components/Header';
 
-export default function Authorize({ currentUser, setCurrentUser }) {
+export default function Authorize({ /*currentUser,/*/ setCurrentUser }) {
   // const [loading, setLoading] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [type, setType] = useState('');
+  const [type, setType] = useState('signIn');
 
   async function formHandler(e) {
     e.preventDefault();
