@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import AuthorizeForm from '../components/AuthorizeForm';
 import { signInUser, signupUser } from '../services/users';
+import Header from '../components/Header';
 
 export default function Authorize({ currentUser, setCurrentUser }) {
   // const [loading, setLoading] = useState(true);
@@ -24,6 +25,7 @@ export default function Authorize({ currentUser, setCurrentUser }) {
 
   return (
     <div>
+      <Header type={type} setType={setType} />
       <AuthorizeForm {...{ email, setEmail, password, setPassword, formHandler }} />
     </div>
   );
